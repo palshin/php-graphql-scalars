@@ -17,22 +17,27 @@
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "webonyx/graphql-php": "^14.8"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
+        "nuwave/lighthouse": "^5.12",
         "phpunit/phpunit": "^9.5",
         "spatie/ray": "^1.10",
         "vimeo/psalm": "^4.3"
     },
+    "suggest": {
+        "nuwave/lighthouse": "GraphQL integration for Laravel projects"
+    },
     "autoload": {
         "psr-4": {
-            "Palshin\\PhpGraphqlScalars\\": "src"
+            "Palshin\\GraphQLScalars\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Palshin\\PhpGraphqlScalars\\Tests\\": "tests"
+            "Palshin\\GraphQLScalars\\Tests\\": "tests"
         }
     },
     "scripts": {
