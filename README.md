@@ -9,11 +9,7 @@ Laravel environment with Lighthouse.
 
 ## Installation
 
-You can install the package via composer:
-
-```bash
-composer require epalshin/graphql-scalars
-```
+> :exclamation: **Package in development**
 
 ## Usage
 
