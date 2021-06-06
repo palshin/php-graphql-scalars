@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Palshin\GraphQLScalars\Invariants;
@@ -13,7 +14,7 @@ class StringMinLengthInvariant implements StringInvariant
 
   public function getErrorMessage(): string
   {
-    return 'String length should be not less than ' . $this->length . ' characters';
+    return 'String length should be not less than '.$this->length.' characters';
   }
 
   public function __invoke(string $value): bool

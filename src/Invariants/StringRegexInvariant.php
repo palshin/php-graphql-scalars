@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Palshin\GraphQLScalars\Invariants;
@@ -18,6 +19,6 @@ class StringRegexInvariant implements StringInvariant
 
   public function getErrorMessage(): string
   {
-    return 'String should match regular expression: ' . $this->regex;
+    return 'String should match regular expression: '.$this->regex;
   }
 }

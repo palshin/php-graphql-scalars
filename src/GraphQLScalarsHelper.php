@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Palshin\GraphQLScalars;
@@ -28,6 +29,6 @@ abstract class GraphQLScalarsHelper
     }
 
     $safeValue = Utils::printSafeJson($value);
-    throw new $exceptionClass('The given value can not be represented as string: ' . $safeValue);
+    throw new $exceptionClass('The given value can not be represented as string: '.$safeValue);
   }
 }

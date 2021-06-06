@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Palshin\GraphQLScalars\Abstracts;
@@ -28,7 +29,7 @@ abstract class StringScalar extends ScalarType
 
   public function parseValue(mixed $value): string
   {
-    $stringValue =  GraphQLScalarsHelper::convertToStringOrThrow($value, Error::class);
+    $stringValue = GraphQLScalarsHelper::convertToStringOrThrow($value, Error::class);
     $this->checkValue($stringValue, Error::class);
 
     return $stringValue;
@@ -36,8 +37,8 @@ abstract class StringScalar extends ScalarType
 
   public function parseLiteral(Node $valueNode, ?array $variables = null): string
   {
-    if (!$valueNode instanceof StringValueNode) {
-      throw new Error('Query error: Can only parse strings got: ' . $valueNode->kind, [$valueNode]);
+    if (! $valueNode instanceof StringValueNode) {
+      throw new Error('Query error: Can only parse strings got: '.$valueNode->kind, [$valueNode]);
     }
     $stringValue = GraphQLScalarsHelper::convertToStringOrThrow($valueNode->value, Error::class);
     $this->checkValue($stringValue, Error::class);
